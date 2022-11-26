@@ -1,5 +1,5 @@
 <?php
-include"Config/con.php"; 
+include"Config/config.php";
 $response = array( 
     'status' => 0, 
     'msg' => 'Some problems occurred, please try again.'
