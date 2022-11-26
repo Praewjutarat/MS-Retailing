@@ -1,5 +1,5 @@
 <?php
-include"Config/Con.php"; 
+include"Config/config.php";
 $page = isset($_POST['page']) ? intval($_POST['page']) : 1; 
 $rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10; 
   
