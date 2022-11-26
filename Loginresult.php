@@ -1,10 +1,10 @@
 <?php
    session_start();
-   //include('config.php');
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "ma_retailing";
+   include('Config/Config.php');
+   // $servername = "localhost";
+   // $username = "root";
+   // $password = "";
+   // $dbname = "ma_retailing";
    
    // $servername = "localhost";
    // $username = "username";
