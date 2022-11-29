@@ -141,7 +141,7 @@ include('Config/Con.php');
                     }" 
                 width="20">ส่วนลดรวม</th>
 
-                <th field="Create" data-options="
+           <!--     <th field="Create" data-options="
                     editor:{
                         type:'combobox',
                         options:{
@@ -187,7 +187,7 @@ include('Config/Con.php');
                             required:true								
                         }
                     }" 
-                width="20">เเก้ไขโดย</th>
+                width="20">เเก้ไขโดย</th> -->
 			</tr>
 		</thead>
 	</table>

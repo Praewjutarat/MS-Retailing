@@ -15,25 +15,45 @@ if($Rows[8] == Null)
 
 mysqli_free_result($objectMax);
 
+$currentDate = new date();
+$currentDate->format('dd/mm/yyy H:i:s');
+
+
+
+mysqli_free_result($objectMax);
+
+
+
+// @$id					= "";
+// @$NamePromotion	 		= "TEST";
+// @$Unitprice 			= "sdsd";
+// @$PerchaseUnitprice 	= 332;
+// @$Status 				= "sds";
+// @$SaleUnitprice 		= 555;
+// @$Discount 				= 555;
+// @$Discount_amount 		= 666;
 
 
 @$id					= iconv('UTF-8', 'TIS-620', $_REQUEST['id']);
-@$NamePromotion	 		= iconv('UTF-8', 'TIS-620', $_REQUEST['NamePromotion	']);
+@$NamePromotion	 		= iconv('UTF-8', 'TIS-620', $_REQUEST['NamePromotion']);
 @$Unitprice 			= iconv('UTF-8', 'TIS-620', $_REQUEST['Unitprice']);
 @$PerchaseUnitprice 	= iconv('UTF-8', 'TIS-620', $_REQUEST['PerchaseUnitprice']);
 @$Status 				= iconv('UTF-8', 'TIS-620', $_REQUEST['Status']);
 @$SaleUnitprice 		= iconv('UTF-8', 'TIS-620', $_REQUEST['SaleUnitprice']);
 @$Discount 				= iconv('UTF-8', 'TIS-620', $_REQUEST['Discount']);
 @$Discount_amount 		= iconv('UTF-8', 'TIS-620', $_REQUEST['Discount_amount']);
-@$Create 			    = iconv('UTF-8', 'TIS-620', $_REQUEST['Create']);
-@$Modify 			 	= iconv('UTF-8', 'TIS-620', $_REQUEST['Modify']);
+//@$Create 			    = $currentDate
+//@$Modify 			 	= $currentDate
 @$Create_by 			= iconv('UTF-8', 'TIS-620', $_REQUEST['Create_by']);
-@$Modify_by 			= iconv('UTF-8', 'TIS-620', $_REQUEST['Modify_by']);;
+@$Modify_by 			= iconv('UTF-8', 'TIS-620', $_REQUEST['Modify_by']);
+
+//@$Create 			    = $currentDate
+//@$Modify 			 	= $currentDate
 
 
 
 
-$stringsql  = "insert into user(NamePromotion, Unitprice, PerchaseUnitprice, Status, SaleUnitprice, Discount, Discount_amount, Create, Modify, Create_by, Modify_by)";
+$stringsql  = "insert into promotion (NamePromotion, Unitprice, PerchaseUnitprice, Status, SaleUnitprice, Discount, Discount_amount, Create, Modify, Create_by, Modify_by)";
 $stringsql .= "values('$NamePromotion', '$Unitprice', '$PerchaseUnitprice', '$Status', '$SaleUnitprice', '$Discount', '$Discount_amount', '$Create', '$Modify', '$Create_by', '$Modify_by')";
 
 $ObjectSave = mysqli_query($conn,$stringsql);
